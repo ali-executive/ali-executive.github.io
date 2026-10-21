@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover: without it every env(safe-area-inset-*) the phone
+         shell pads with is 0. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- SEO. Add canonical / og:url / og:image once the site has a domain. -->
+    <title>Alliah Puchero - Executive Assistant</title>
+    <meta name="description" content="Executive Assistant, operations and client success support for busy professionals and growing businesses: calendars, inboxes, CRM, Xero and accounts receivable." />
+    <meta name="author" content="Alliah Puchero" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <!-- The browser bar takes the page colour (--cream per theme); the inline
+         theme script below and lib/theme.ts keep it in step with the toggle.
+         Literal hex here only because this runs before any stylesheet loads. -->
+    <meta name="theme-color" content="#F8F1EE" />
+    <!-- <link rel="canonical" href="https://yoursite.com/" /> -->
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- The rail avatar is above the fold on every desktop route. Keep this in
+         sync with profile.avatarSrc in src/data/profile.ts. -->
+    <link rel="preload" as="image" href="/ali/avatar.jpg" fetchpriority="high" media="(min-width: 1100px)" />
+
+    <!-- Open Graph / social share. og:image must be an absolute URL once you deploy. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alliah Puchero" />
+    <meta property="og:title" content="Alliah Puchero - Executive Assistant" />
+    <meta property="og:description" content="Executive Assistant, operations and client success support for busy professionals and growing businesses: calendars, inboxes, CRM, Xero and accounts receivable." />
+    <!-- <meta property="og:url" content="https://yoursite.com/" /> -->
+    <!-- <meta property="og:image" content="https://yoursite.com/share.png" /> -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Theme before first paint: no flash of the wrong palette. Default is
+         light; dark is the visitor's opt-in, persisted in localStorage. -->
+    <script>
+      (function () {
+        try {
+          document.documentElement.dataset.theme =
+            localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+        if (document.documentElement.dataset.theme === 'dark') {
+          var bar = document.querySelector('meta[name="theme-color"]');
+          if (bar) bar.setAttribute('content', '#070B14');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-CnYKyD46.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CyXV1R9M.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
